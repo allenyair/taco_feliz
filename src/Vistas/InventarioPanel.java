@@ -61,6 +61,7 @@ public class InventarioPanel extends JPanel {
         }
 
         JTable tabla = new JTable(modeloInventario);
+        
         JScrollPane scrollPane = new JScrollPane(tabla);
         tablaPanel.add(scrollPane, BorderLayout.CENTER);
         add(tablaPanel);
