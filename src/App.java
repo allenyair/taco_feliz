@@ -6,6 +6,8 @@ import Vistas.InventarioPanel;
 import Vistas.MenuPanel;
 import Vistas.MesasPanel;
 import Vistas.NavegacionPanel;
+import Vistas.ReportesPanel;
+import Vistas.ReservasPanel;
 
 import java.awt.*;
 import java.awt.event.*;
@@ -15,6 +17,9 @@ public class App extends JFrame implements ActionListener {
     final static String PANEL1 = "Panel 1";
     final static String PANEL2 = "Panel 2";
     final static String PANEL3 = "Panel 3";
+    final static String PANEL4 = "Panel 4";
+    final static String PANEL5 = "Panel 5";
+    
     
     public App() {
         try {
@@ -22,6 +27,7 @@ public class App extends JFrame implements ActionListener {
         } catch (UnsupportedLookAndFeelException ex) {
             System.err.println("Failed to initialize FlatLaf");
         }
+
 
         setTitle("Restaurante El Taco Feliz");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -34,6 +40,8 @@ public class App extends JFrame implements ActionListener {
         container.add(new MenuPanel(), PANEL1);
         container.add(new MesasPanel(), PANEL2);
         container.add(new InventarioPanel(this), PANEL3);
+        container.add(new ReportesPanel(), PANEL4);
+        container.add(new ReservasPanel(), PANEL5);
 
         JPanel buttonPanel = new NavegacionPanel(this);
 
@@ -41,7 +49,7 @@ public class App extends JFrame implements ActionListener {
         getContentPane().add(container, BorderLayout.CENTER);
 
         pack();
-        setLocationRelativeTo(null);
+        setLocationRelativeTo(null); // Centrar la ventana en la pantalla
         setVisible(true);
     }
 
@@ -53,7 +61,10 @@ public class App extends JFrame implements ActionListener {
             cl.show(container, PANEL2);
         } else if (e.getActionCommand().equals("Inventario")) {
             cl.show(container, PANEL3);
-            ((InventarioPanel)container.getComponent(2)).repaint();
+        }else if (e.getActionCommand().equals("Reportes")) {
+            cl.show(container, PANEL4);
+        }else if (e.getActionCommand().equals("Reservas")) {
+            cl.show(container, PANEL5);
         }
     }
 

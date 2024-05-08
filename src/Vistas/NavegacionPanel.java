@@ -19,7 +19,7 @@ public class NavegacionPanel extends JPanel {
         btnIrMesas.setSize(new Dimension(250, 50));
         btnIrMesas.addActionListener(listener);
 
-        JButton btnIrReservaciones = new JButton("Reservaciones");
+        JButton btnIrReservaciones = new JButton("Reservas");
         btnIrReservaciones.setSize(new Dimension(250, 50));
         btnIrReservaciones.addActionListener(listener);
 
