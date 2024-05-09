@@ -1,3 +1,2 @@
 
 01:ALLEN :5:2:MAMONES
-2:allen:2:2:nada

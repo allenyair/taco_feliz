@@ -4,7 +4,7 @@ import com.formdev.flatlaf.FlatDarkLaf;
 
 import Vistas.InventarioPanel;
 import Vistas.MenuPanel;
-import Vistas.OrdenesPanel;
+import Vistas.MesasPanel;
 import Vistas.NavegacionPanel;
 import Vistas.ReportesPanel;
 import Vistas.ReservasPanel;
@@ -38,7 +38,7 @@ public class App extends JFrame implements ActionListener {
 
         // Agregar los paneles al contenedor
         container.add(new MenuPanel(), PANEL1);
-        container.add(new OrdenesPanel(), PANEL2);
+        container.add(new MesasPanel(), PANEL2);
         container.add(new InventarioPanel(this), PANEL3);
         container.add(new ReportesPanel(), PANEL4);
         container.add(new ReservasPanel(), PANEL5);
@@ -57,7 +57,7 @@ public class App extends JFrame implements ActionListener {
         CardLayout cl = (CardLayout)(container.getLayout());
         if (e.getActionCommand().equals("Menu")) {
             cl.show(container, PANEL1);
-        } else if (e.getActionCommand().equals("Ordenes")) {
+        } else if (e.getActionCommand().equals("Servicio de Mesas")) {
             cl.show(container, PANEL2);
         } else if (e.getActionCommand().equals("Inventario")) {
             cl.show(container, PANEL3);

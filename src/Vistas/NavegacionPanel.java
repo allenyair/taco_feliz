@@ -15,7 +15,7 @@ public class NavegacionPanel extends JPanel {
         btnIrMenu.setPreferredSize(new Dimension(250, 50));
         btnIrMenu.addActionListener(listener);
 
-        JButton btnIrMesas = new JButton("Ordenes");
+        JButton btnIrMesas = new JButton("Servicio de Mesas");
         btnIrMesas.setSize(new Dimension(250, 50));
         btnIrMesas.addActionListener(listener);
 
