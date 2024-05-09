@@ -11,7 +11,6 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class InventarioPanel extends JPanel {
-
     DefaultTableModel modeloInventario = new DefaultTableModel();
 
     public InventarioPanel(ActionListener listener) {
@@ -81,3 +80,4 @@ public class InventarioPanel extends JPanel {
     }    
 
 }
+

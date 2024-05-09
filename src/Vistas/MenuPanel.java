@@ -26,10 +26,9 @@ public class MenuPanel extends JPanel {
         allProductos.add(new JButton("TACO DE BISTEC"));
         allProductos.add(new JButton("TACO DE BISTEC"));
         allProductos.add(new JButton("TACO DE BISTEC"));
-        allProductos.add(new JButton("TACO DE BISTEC"));
-        allProductos.add(new JButton("TACO DE BISTEC"));
-        allProductos.add(new JButton("TACO DE BISTEC"));
-        allProductos.add(new JButton("TACO DE BISTEC"));
+        allProductos.add(new JButton("TACO DE Barbacoa"));
+        allProductos.add(new JButton("Quesadillas"));
+
         add(allProductos);
 
 

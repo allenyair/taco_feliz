@@ -3,3 +3,6 @@ bistec:tacos:20:10
 TACOS BISTEC:TACOS:10:10
 higado:tacos:20:10
 TACO DE TRIPA:TACOS:20:10
+
+111:1:11
+tacos de pastor:tacos:10:15

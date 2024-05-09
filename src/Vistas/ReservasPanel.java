@@ -21,7 +21,9 @@ public class ReservasPanel extends JPanel {
         tituloLabel.setForeground(Color.BLACK);
         add(tituloLabel);
 
+
         setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
+
 
         JPanel actionsPanel = new JPanel(new FlowLayout(0));
 
@@ -29,6 +31,7 @@ public class ReservasPanel extends JPanel {
         
         agregarBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+              
                 AddReservasPanel formulario = new AddReservasPanel();
                 formulario.mostrar();
             }
@@ -36,24 +39,21 @@ public class ReservasPanel extends JPanel {
 
         actionsPanel.add(agregarBtn);
 
-        actionsPanel.add(new JButton("Opciones"));
-        add(actionsPanel);
+
 
         JPanel tablaPanel = new JPanel(new BorderLayout());
-        DefaultTableModel modeloReserva = new DefaultTableModel();
-        modeloReserva.addColumn("Orden");
-        modeloReserva.addColumn("Nombre");
-        modeloReserva.addColumn("Personas");
-        modeloReserva.addColumn("Mesa");
-        modeloReserva.addColumn("Observaciones");
+        DefaultTableModel modeloInventario = new DefaultTableModel();
+        modeloInventario.addColumn("Orden");
+        modeloInventario.addColumn("Nombre");
+        modeloInventario.addColumn("Costo");
 
         try {
-            BufferedReader lector = new BufferedReader(new FileReader("src/dbFiles/reservas.txt"));
+            BufferedReader lector = new BufferedReader(new FileReader("src/dbFiles/Reservas.txt"));
             String linea;
             while ((linea = lector.readLine()) != null) {
                 String[] datos = linea.split(":");
-                if (datos.length == 5) {
-                    modeloReserva.addRow(datos);
+                if (datos.length == 3) {
+                    modeloInventario.addRow(datos);
                 }
             }
             lector.close();
@@ -61,7 +61,7 @@ public class ReservasPanel extends JPanel {
             System.err.println("Error al leer el archivo: " + e.getMessage());
         }
 
-        JTable tabla = new JTable(modeloReserva);
+        JTable tabla = new JTable(modeloInventario);
         JScrollPane scrollPane = new JScrollPane(tabla);
         tablaPanel.add(scrollPane, BorderLayout.CENTER);
         add(tablaPanel);
